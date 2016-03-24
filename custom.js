@@ -1,6 +1,7 @@
-(function(){
+(function() {
     'use strict';
-    
+
+    // set Highcharts global variables
     var options = {
         lang: {
             decimalPoint: '.',
@@ -9,10 +10,9 @@
             weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         }
     };
-    
-    Highcharts.setOptions(options);
-    
-    var chartOptions = {
+
+    // set specific chart variables
+    var chart = {
         chart: {
             alignTicks: true,
             animation: true,
@@ -31,19 +31,36 @@
             enabled: true
         },
         rangeSelector: {
-            selected: 1
+            buttonTheme: {
+                // stroke
+              fill: 'none'  
+            },
+            enabled: true,
+            inputEnabled: false,
+            labelStyle: {
+                color: '#D6D7D7'
+            },
+            selected: 0
         },
         scrollbar: {
             enabled: true
+        }
+    };
+
+    // extend for specific chart instance
+    $.extend(true, chart, {
+        chart: {
+            type: 'line'
         },
         series: [{
             name: 'GOOGL',
             data: GOOGL
         }, {
-            name: 'MSFT',
-            data: MSFT
-        }]
-    };
-    
-    $('#chart').highcharts('StockChart', chartOptions);
-}());
+                name: 'MSFT',
+                data: MSFT
+            }]
+    });
+
+    Highcharts.setOptions(options);
+    $('#chart').highcharts('StockChart', chart);
+} ());
