@@ -26,14 +26,24 @@
         credits: {
             enabled: false
         },
+        labels: {
+            style: {
+                color: '#FFF'
+            }
+        },
         legend: {
             align: 'center',
-            enabled: true
+            enabled: true,
+            itemStyle: {
+                color: '#FFF'
+            }
         },
         rangeSelector: {
             buttonTheme: {
-                // stroke
-              fill: 'none'  
+                fill: 'none',
+                style: {
+                    color: '#FFF'
+                }
             },
             enabled: true,
             inputEnabled: false,
@@ -44,6 +54,13 @@
         },
         scrollbar: {
             enabled: true
+        },
+        xAxis: {
+            labels: {
+                style: {
+                    color: '#FFF'
+                }
+            }
         }
     };
 
