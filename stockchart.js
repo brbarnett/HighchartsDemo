@@ -7,6 +7,11 @@
             chart: {
                 type: 'line'
             },
+            labels: {
+                items: {
+                    html: "'<div>Item with markup</div><div>Item with markup</div>'"
+                }
+            },
             series: [{
                 name: 'GOOGL',
                 data: GOOGL

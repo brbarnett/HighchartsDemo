@@ -38,6 +38,11 @@
                 color: '#FFF'
             }
         },
+        plotOptions: {
+            line: {
+                dashStyle: 'Solid'
+            }
+        },
         rangeSelector: {
             buttonTheme: {
                 fill: 'none',
@@ -56,6 +61,9 @@
             enabled: true
         },
         xAxis: {
+            crosshair: {
+                dashStyle: 'Dash',
+            },
             labels: {
                 style: {
                     color: '#FFF'
