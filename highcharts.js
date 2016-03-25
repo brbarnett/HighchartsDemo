@@ -11,8 +11,8 @@
         }
     };
 
-    // set specific chart variables
-    var chart = {
+    // set generic chart variables
+    window.chart = {
         chart: {
             alignTicks: true,
             animation: true,
@@ -47,20 +47,5 @@
         }
     };
 
-    // extend for specific chart instance
-    $.extend(true, chart, {
-        chart: {
-            type: 'line'
-        },
-        series: [{
-            name: 'GOOGL',
-            data: GOOGL
-        }, {
-                name: 'MSFT',
-                data: MSFT
-            }]
-    });
-
     Highcharts.setOptions(options);
-    $('#chart').highcharts('StockChart', chart);
 } ());

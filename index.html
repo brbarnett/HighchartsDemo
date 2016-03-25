@@ -3,19 +3,33 @@
 
 <head>
     <title>Highcharts</title>
-    
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
     <link href="custom.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Highcharts Demo</h1>
-    
-    <div id="chart"></div>
-    
-    <script  src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <div class="container-fluid">
+        <h1>Highcharts Demo</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Stock Chart</h2>
+                <div class="chart" id="stockchart"></div>
+            </div>
+            <div class="col-md-6">
+                <h2>Stock Chart (No Nav)</h2>
+                <div class="chart" id="stockchart-nonav"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script type="text/javascript" src="https://www.highcharts.com/samples/data/three-series-1000-points.js"></script>
-    <script src="custom.js"></script>
+    <script src="https://www.highcharts.com/samples/data/three-series-1000-points.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="stockchart.js"></script>
+    <script src="stockchart-nonav.js"></script>
 </body>
 
 </html>

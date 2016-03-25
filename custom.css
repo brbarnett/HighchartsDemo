@@ -1,5 +1,9 @@
-#chart {
-    height: 600px;
+html, body {
+    margin: 0;
+}
+
+.chart {
+    /*height: 600px;
     margin: 0 auto;
-    width: 1000px;    
+    width: 100%;    */
 }
