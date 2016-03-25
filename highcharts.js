@@ -19,8 +19,7 @@
             backgroundColor: '#384450',
             panning: true,
             plotBorderColor: '#535D68',
-            plotBorderWidth: 1,
-            type: 'line'
+            plotBorderWidth: 1
         },
         colors: ['#2A80CF', '#E97232', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1'],
         credits: {
@@ -41,6 +40,17 @@
         plotOptions: {
             line: {
                 dashStyle: 'Solid'
+            },
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
             }
         },
         rangeSelector: {
